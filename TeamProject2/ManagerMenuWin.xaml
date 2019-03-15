@@ -1,0 +1,88 @@
+﻿<Window x:Class="TeamProject2.ManagerMenuWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TeamProject2"
+        mc:Ignorable="d"
+        Title="ManagerMenuWin" MaxHeight="480" MinHeight="480" MaxWidth="700">
+    <Grid Background="#FF215C6C" MinHeight="500" Margin="0,2,0,2"  >
+        <Label Content="학생정보" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="1.143,1.327" Margin="10,41,0,0" Height="26" Width="58" Foreground="White" FontFamily="TmonMonsoriOTF Black"/>
+        <TextBox x:Name="txtCheck" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="436" Margin="10,13,0,0"/>
+        <Border Margin="0,0,5,0"  >
+            <StackPanel Margin="500,44,-55,66">
+                <Label Height="auto" Content="학번" HorizontalAlignment="Left" VerticalAlignment="Top"  RenderTransformOrigin="0.272,-0.641" Background="Transparent" Foreground="White" FontFamily="TmonMonsori Black" />
+                <TextBox x:Name="txtID" Text="{Binding MyID}" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" />
+
+                <Label Height="auto" Content="이름" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.554,-0.823" Foreground="White" FontFamily="TmonMonsoriOTF Black"/>
+                <TextBox x:Name="txtName" Text="{Binding MyGrade}" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" />
+
+                <Label Height="auto" Content="학년" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="1.685,0.68" Foreground="White" FontFamily="TmonMonsoriOTF Black"/>
+                <ComboBox x:Name="cboxGrade" Text="{Binding MyName}" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="160" />
+
+                <Label Height="auto" Content="학과" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.446,-1.703" Foreground="White" FontFamily="TmonMonsoriOTF Black"/>
+                <ComboBox x:Name="cboxMajor" Text="{Binding MyMajor}" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="160" />
+
+                <Label Height="auto" Content="생년월일" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="2.005,0.391" Foreground="White" FontFamily="TmonMonsoriOTF Black"/>
+                <TextBox x:Name="txtBirth" Text="{Binding MyBirth}" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" />
+
+                <Label Height="auto" Content="주소" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="1.288,4.015" Foreground="White" FontFamily="TmonMonsoriOTF Black" />
+                <TextBox x:Name="txtAddress" Text="{Binding MyAddress}" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" />
+
+                <Label Height="auto" Content="상태" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" FontFamily="TmonMonsoriOTF Black" />
+                <ComboBox x:Name="cboxState" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="160" />
+
+            </StackPanel>
+        </Border>
+        <Button x:Name="btnCheck" Content="조회" HorizontalAlignment="Left" VerticalAlignment="Top" Width="163" Margin="497,13,0,0" Height="23" Click="BtnCheck_Click" FontFamily="TmonMonsoriOTF Black" />
+        <Button x:Name="btnAdd" Content="추가" HorizontalAlignment="Left" VerticalAlignment="Top" Width="74" Margin="426,392,0,0"  Height="20" Click="BtnAdd_Click"/>
+        <Button x:Name="btnChange" Content="수정" HorizontalAlignment="Left" VerticalAlignment="Top" Width="74" Margin="506,392,0,0" Height="20" Click="BtnChange_Click"/>
+        <Button Content="로그아웃" HorizontalAlignment="Left" VerticalAlignment="Top" Width="74" Margin="586,392,0,0"  Height="20" Click="Button_Click"/>
+        <DataGrid x:Name="dataGridStudent"
+                  ItemsSource="{Binding Students}"
+                  SelectionChanged="DataGridStudent_SelectionChanged"
+                  AutoGenerateColumns="False"
+                  CanUserResizeRows="False"
+                  HorizontalAlignment="Left"
+                  Height="298" 
+                  Margin="10,66,0,0" 
+                  VerticalAlignment="Top" 
+                  Width="436" FontFamily="TmonMonsoriOTF Black" Background="White" OpacityMask="Black" Foreground="Black">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path=ID}"
+                                    Header="학번"
+                                    Width="auto"
+                                    IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding Path=Major}"
+                                    Header="전공"
+                                    Width="auto"
+                                    IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding Path=Grade}"
+                                    Header="학년"
+                                    Width="auto"
+                                    IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding Path=Name}"
+                                    Header="이름"
+                                    Width="auto"
+                                    IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding Path=birth}"
+                                    Header="출생년도"
+                                    Width="auto"
+                                    IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding Path=Address}"
+                                    Header="주소"
+                                    Width="auto"
+                                    IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding Path=state}"
+                                    Header="상태"
+                                    Width="auto"
+                                    IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding Path=Password}"
+                                    Header="비밀번호"
+                                    Width="auto"
+                                    IsReadOnly="True"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+
+</Window>

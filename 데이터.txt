@@ -1,0 +1,27 @@
+create database managestudent;
+
+use managestudent;
+
+CREATE TABLE IF NOT EXISTS `ManageLogin` (
+  `MID` varchar(30) DEFAULT NULL,
+  `MPassword` int(10) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+INSERT INTO `ManageLogin`(`MID`,`MPassword`) VALUE
+('root1', 1234),
+('root2', 5678);
+
+CREATE TABLE IF NOT EXISTS `StudentInfo` (
+  `ID` int(20) DEFAULT NULL,
+  `Major` varchar(20) DEFAULT NULL,
+  `Grade` varchar(11) DEFAULT NULL,
+  `Name` varchar(20) DEFAULT NULL, 
+  `birth` int(20) DEFAULT NULL,
+  `Address` varchar(20) DEFAULT NULL,
+  `state` varchar(20) DEFAULT NULL,
+  `Password` int(20) DEFAULT NULL,
+  `Year` int(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+INSERT INTO `StudentInfo`
+(`ID`,`Major`,`Grade`,`Name`,`birth`,`Address`,`state`,`Password`, `Year`) VALUE
+(20150001,'컴퓨터과학과','2학년','김우성',19960817,'안양시','재학',19960817, 2015),
+(20153001,'경찰행정학과','3학년','홍길동',19941231,'서울시','휴학',19941231, 2015);

@@ -1,0 +1,28 @@
+﻿<Page x:Class="TeamProject2.StudentLogin"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TeamProject2"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="StudentLogin" Background="#FF0B5164">
+
+    <Border Background="#FF215C6C" CornerRadius="20" Margin="20">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FF215C6C" Margin="239,64,228,63.6" Width="293">
+            <TextBlock FontSize="20" HorizontalAlignment="Center" FontFamily="TmonMonsoriOTF Black" Foreground="White" Margin="99,20,97.8,2"><Run Text="학생 로그인"/></TextBlock>
+            <StackPanel Margin="20" Orientation="Horizontal" >
+                <TextBlock FontSize="20" Width="90" FontFamily="TmonMonsoriOTF Black" Foreground="White" ><Run Text="아이디"/></TextBlock>
+                <TextBox x:Name="txtUser" FontSize="20" Width="160" ></TextBox>
+            </StackPanel>
+            <StackPanel Margin="20" Orientation="Horizontal" >
+                <TextBlock FontSize="20" Width="90" FontFamily="TmonMonsoriOTF Black" Foreground="White"><Run/><Run Text="비밀번호"/></TextBlock>
+                <PasswordBox x:Name="txtPass" FontSize="20" Width="160"/>
+            </StackPanel>
+            <StackPanel Margin="20" Orientation="Horizontal">
+                <Button x:Name="btnLogin" Content="로그인" Margin="2" FontSize="25" Width="248" Click="BtnLogin_Click" FontFamily="TmonMonsoriOTF Black" />
+            </StackPanel>
+        </StackPanel>
+    </Border>
+
+</Page>

@@ -1,0 +1,40 @@
+﻿<Window x:Class="TeamProject2.StudentMenuWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TeamProject2"
+        mc:Ignorable="d"
+        Title="학생 정보" MaxHeight="500" MaxWidth="800" >
+    <Grid>
+
+        <Grid  Background="#FF215C6C" Margin="0,10,0,-11" >
+            <Label Foreground="White" Content="학번:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="160,70,0,0" RenderTransformOrigin="0.891,0.655" Width="89" FontFamily="TmonMonsoriOTF Black"/>
+            <Label Foreground="White" Content="이름:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="160,100,0,0" Width="80" FontFamily="TmonMonsoriOTF Black"/>
+            <Label Foreground="White" Content="학과:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="160,130,0,0" Width="80" FontFamily="TmonMonsoriOTF Black"/>
+            <Label Foreground="White" Content="학년:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="160,160,0,0" RenderTransformOrigin="0.75,0.791" Width="89" FontFamily="TmonMonsoriOTF Black"/>
+            <Label Foreground="White" Content="주소:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="160,190,0,0" RenderTransformOrigin="0.891,0.655" Width="97" FontFamily="TmonMonsoriOTF Black"/>
+
+            <Label Foreground="White" Content="생년월일:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="150,220,0,0" Width="80" HorizontalContentAlignment="Center" FontFamily="TmonMonsoriOTF Black" Background="{x:Null}"/>
+            <Label Foreground="White" Content="상태:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="160,250,0,0" Width="80" FontFamily="TmonMonsoriOTF Black"/>
+            <Label Foreground="White" Content="비밀번호" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="150,280,0,0" Width="80" HorizontalContentAlignment="Center" FontFamily="TmonMonsoriOTF Black"/>
+            <TextBlock Foreground="White" x:Name="txtID" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="270,70,0,0" Height="21" Width="340" FontFamily="TmonMonsoriOTF Black"><Run Text=""/></TextBlock>
+            <TextBox  x:Name="txtName" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="340" Margin="270,100,0,0" FontFamily="TmonMonsoriOTF Black"/>
+            <ComboBox x:Name="cboxMajor" HorizontalAlignment="Left" VerticalAlignment="Top" Width="340" Margin="270,130,0,0" FontFamily="TmonMonsoriOTF Black"></ComboBox>
+            <TextBox x:Name="txtAddress" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="340" Margin="270,190,0,0" FontFamily="TmonMonsoriOTF Black"/>
+
+            <TextBlock Foreground="White" x:Name="txtGrade" Height="23" HorizontalAlignment="Left" VerticalAlignment="Top" Width="340" Margin="270,160,0,0" FontFamily="TmonMonsoriOTF Black"></TextBlock>
+
+            <TextBlock Foreground="White" x:Name="txtBirth" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="270,220,0,0" Height="21" Width="340" ><Run Text="" FontFamily="TmonMonsoriOTF Black"/></TextBlock>
+            <ComboBox x:Name="cboxState" HorizontalAlignment="Left" VerticalAlignment="Top" Width="340" Margin="270,250,0,0" RenderTransformOrigin="0.5,0.5" FontFamily="TmonMonsoriOTF Black"/>
+
+            <TextBox x:Name="txtPass" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="340" Margin="270,280,0,0" FontFamily="TmonMonsoriOTF Black"/>
+            <Label Foreground="White" Content="학생정보" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="340,30,0,0" RenderTransformOrigin="3.259,0.145" FontSize="22" FontFamily="TmonMonsoriOTF Black"/>
+
+            <Button Content="수정" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="170,340,0,0" Click="Button_Click_1" FontFamily="TmonMonsoriOTF Black"/>
+            <Button Content="로그아웃" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="410,340,0,0" FontFamily="TmonMonsoriOTF Black" Click="Button_Click_2"/>
+
+        </Grid>
+    </Grid>
+
+</Window>
